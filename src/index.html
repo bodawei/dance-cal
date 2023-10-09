@@ -24,7 +24,7 @@
         // document.querySelector('#log2').textContent = `result: ${body}`;
         // document.querySelector('#name').textContent = body;
       } catch (e) {
-        document.querySelector('#log2').textContent = `message: ${e}`;
+        document.querySelector('#log2').textContent = 'message:' + e.message;
       }
     }());
     </script>
