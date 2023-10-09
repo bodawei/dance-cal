@@ -20,7 +20,11 @@
     (async function() {
       document.querySelector('#log').textContent = "starting";
       try {
-        const { body } = await( await fetch("/api/message?name=fred")).json();
+        const response = await fetch("/api/message?name=fred");
+        document.querySelector('#name').textContent = 'nane';
+        const payload = await response.json();
+        document.querySelector('#log').textContent = JSON.stringify(payload);
+
         // document.querySelector('#log2').textContent = `result: ${body}`;
         // document.querySelector('#name').textContent = body;
       } catch (e) {
