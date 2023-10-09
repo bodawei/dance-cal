@@ -22,7 +22,7 @@
       try {
         const response = await fetch("/api/message?name=fred");
         document.querySelector('#name').textContent = 'nane';
-        const payload = await response.json();
+        const payload = await response.text();
         document.querySelector('#log').textContent = JSON.stringify(payload);
 
         // document.querySelector('#log2').textContent = `result: ${body}`;
