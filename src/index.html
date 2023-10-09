@@ -20,11 +20,11 @@
     (async function() {
       document.querySelector('#log').textContent = "starting";
       try {
-        const { body } = await( await fetch(`/api/message`)).json();
+        const { body } = await( await fetch("/api/message")).json();
         // document.querySelector('#log2').textContent = `result: ${body}`;
         // document.querySelector('#name').textContent = body;
       } catch (e) {
-        document.querySelector('#log2').textContent = 'message:' + e.message;
+        document.querySelector('#log2').textContent = e.message;
       }
     }());
     </script>
